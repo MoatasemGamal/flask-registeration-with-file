@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block body%}
-<form method="post" style="display: flex; justify-content: center; align-items: center; flex-direction: column;gap: 20px;">
+<form method="post" action="/" style="display: flex; justify-content: center; align-items: center; flex-direction: column;gap: 20px;">
     <h1>Login</h1>
     <input type="email" name="email" required placeholder="Email address">
     <input type="password" name="password" required placeholder="Password">
-    <input type="submit" value="login">
+    <input type="submit" value="login" formnovalidate>
 </form>
 {% endblock %}
