@@ -1,7 +1,7 @@
 # import flask
 # print(flask.__version__)
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def home_page():
 
 @app.route("/login")
 def login_page():
-    return "<h1>Login</h1>"
+    return render_template("login.html", title="Login")
 
 @app.route("/register")
 def register_page():
