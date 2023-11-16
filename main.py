@@ -7,6 +7,12 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def home_page():
+    if request.method == 'POST' and "name" in request.form:
+        # Register
+        return request.form
+    elif request.method == 'POST':
+        #Login
+        return request.form
     return "<h1>This is The Home Page</h1>"
 
 @app.route("/login")
