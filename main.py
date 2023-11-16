@@ -1,11 +1,11 @@
 # import flask
 # print(flask.__version__)
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def home_page():
     return "<h1>This is The Home Page</h1>"
 
