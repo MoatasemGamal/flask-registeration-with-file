@@ -16,3 +16,6 @@ def login_page():
 @app.route("/register")
 def register_page():
     return "<h1>Register</h1>"
+
+if __name__ == "__main__":
+    app.run(debug=True, port=9000)
